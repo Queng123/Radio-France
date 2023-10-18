@@ -1,0 +1,26 @@
+{
+    "manifest_version": 3,
+    "name": "Radio France transcriptions",
+    "version": "0.1.0",
+    "description": "Add the transcriptions to the Radio France podcasts",
+    "content_scripts": [
+        {
+            "matches": [
+                "https://www.radiofrance.fr/podcasts/*"
+            ],
+            "js": [
+                "scripts/content.js"
+            ],
+            "run_at": "document_end"
+        }
+    ],
+    "permissions": [
+        "declarativeNetRequest",
+        "declarativeNetRequestFeedback",
+        "storage",
+        "webRequest"
+    ],
+    "host_permissions": [
+        "https://www.radiofrance.fr/podcasts/*"
+    ]
+}
